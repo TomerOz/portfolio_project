@@ -135,3 +135,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #doesnt have to be the same as media_root
 MEDIA_URL = '/media/' 
 
+try:
+	from local_settinfs import *
+except ImportError:
+	pass
