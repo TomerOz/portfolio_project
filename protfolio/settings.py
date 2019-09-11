@@ -122,11 +122,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+
+STATICFILES_DIRS = [
+					os.path.join(BASE_DIR, 'protfolio/static/')
+						]
+						
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 # I've created these two contatnts and I use them in jobs.admin
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 #doesnt have to be the same as media_root
 MEDIA_URL = '/media/' 
 
